@@ -34,6 +34,7 @@ public class Configs implements IConfigHandler
 
     public static class Generic
     {
+        public static final ConfigInteger CLIENT_TIME = new ConfigInteger("clientTime", 6000, 0, 24000, "The in game time you want to change, in gametick");
         public static final ConfigInteger       AFTER_CLICKER_CLICK_COUNT           = new ConfigInteger     ("afterClickerClickCount",  1, 1, 32, "The number of right clicks to do per placed block when\ntweakAfterClicker is enabled");
         public static final ConfigDouble        BLOCK_REACH_DISTANCE                = new ConfigDouble      ("blockReachDistance", 4.5, 0, 8, "The block reach distance to use if the\noverride tweak is enabled.\nThe maximum the server allows is 8 for placing, 6 for breaking.");
         public static final ConfigInteger       BREAKING_GRID_SIZE                  = new ConfigInteger     ("breakingGridSize", 3, 1, 1000, "The grid interval size for the grid breaking mode.\nTo quickly adjust the value, scroll while\nholding down the tweak toggle keybind.");
@@ -86,6 +87,8 @@ public class Configs implements IConfigHandler
         public static final ConfigDouble        ZOOM_FOV                            = new ConfigDouble      ("zoomFov", 30, 0, 600, "The FOV value used for the zoom feature");
 
         public static final ImmutableList<IConfigBase> OPTIONS = ImmutableList.of(
+                CLIENT_TIME,
+
                 CLIENT_PLACEMENT_ROTATION,
                 FREE_CAMERA_MOTION_TOGGLE,
                 LAVA_VISIBILITY_OPTIFINE,

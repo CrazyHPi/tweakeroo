@@ -13,7 +13,7 @@ import net.minecraft.network.packet.c2s.play.UpdateStructureBlockC2SPacket;
 @Mixin(value = UpdateStructureBlockC2SPacket.class, priority = 999)
 public abstract class MixinUpdateStructureBlockC2SPacket
 {
-    @ModifyConstant(method = "read",
+    /*@ModifyConstant(method = "read",
             slice = @Slice(from = @At(value = "FIELD", opcode = Opcodes.PUTFIELD,
                                       target = "Lnet/minecraft/server/network/packet/UpdateStructureBlockC2SPacket;offset:Lnet/minecraft/util/math/BlockPos;"),
                            to   = @At(value = "FIELD", opcode = Opcodes.PUTFIELD,
@@ -27,5 +27,5 @@ public abstract class MixinUpdateStructureBlockC2SPacket
         }
 
         return original;
-    }
+    }*/
 }

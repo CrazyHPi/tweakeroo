@@ -5,6 +5,9 @@ buildscript {
             name = "Fabric"
             url = "https://maven.fabricmc.net/"
         }
+        maven {
+            url = "https://maven.terraformersmc.com/"
+        }
     }
     dependencies {
         classpath 'net.fabricmc:fabric-loom:0.4-SNAPSHOT'
@@ -16,6 +19,9 @@ apply plugin: "fabric-loom"
 repositories {
     maven {
         url 'https://masa.dy.fi/maven'
+    }
+    maven {
+        url = "https://maven.terraformersmc.com/"
     }
 }
 
@@ -40,7 +46,8 @@ dependencies {
     //modCompile "net.fabricmc.fabric-api:fabric-api:" + config.fabric_version
 
     modCompile "fi.dy.masa.malilib:malilib-fabric-${config.minecraft_version_out}:${config.malilib_version}"
-    modCompile "io.github.prospector:modmenu:${config.mod_menu_version}"
+    //modCompile "releases.io.github.prospector:modmenu:${config.mod_menu_version}"
+    compile "io.github.prospector:modmenu:1.7.14.1.14.4+build.126"
 }
 
 minecraft {

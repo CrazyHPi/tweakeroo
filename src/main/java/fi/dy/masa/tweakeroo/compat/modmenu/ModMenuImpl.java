@@ -14,7 +14,7 @@ public class ModMenuImpl implements ModMenuApi
         return Reference.MOD_ID;
     }
 
-    @Override
+    /*@Override
     public Function<Screen, ? extends Screen> getConfigScreenFactory()
     {
         return (screen) -> {
@@ -22,5 +22,5 @@ public class ModMenuImpl implements ModMenuApi
             gui.setParent(screen);
             return gui;
         };
-    }
+    }*/
 }
